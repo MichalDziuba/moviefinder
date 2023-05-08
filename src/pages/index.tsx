@@ -1,11 +1,7 @@
-
-
-import { Layout } from "@/components/layout";
+import { Layout } from "@/components/Layout/layout";
 import Page500 from "./500";
 
-
 export default function Home({ data, requestFailed }: any) {
-
   if (requestFailed) {
     return <Page500 />;
   }

@@ -1,3 +1,4 @@
+import { SearchInput } from "./input";
 import { Logo } from "./logo";
 import { NavButton } from "./navButton";
 
@@ -6,6 +7,7 @@ export const Navbar = () => {
     <header className="w-full h-32 flex flex-col items-center text-2xl border-b-2 border-secondary shadow-secondary box shadow-sm bottom-0 overflow-y-auto">
       <div className="w-11/12  h-1/2 items-center flex justify-between">
         <Logo />
+        <SearchInput />
       </div>
       <nav className="flex h-1/2 items-center w-11/12 justify-around">
         <NavButton text="Movies" href="/movies" />

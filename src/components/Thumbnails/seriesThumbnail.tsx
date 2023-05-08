@@ -1,30 +1,30 @@
-import { MovieProps } from "@/types/Movie";
-import Image from "next/image";
 import Link from "next/link";
-export const Movie = ({
-  adult,
+import Image from "next/image";
+import { TVShow } from "@/types/Series";
+export const SeriesThumbnail = ({
   backdrop_path,
+  first_air_date,
   genre_ids,
   id,
-  media_type,
+  name,
+  origin_country,
   original_language,
+  original_name,
   overview,
   popularity,
   poster_path,
-  release_date,
-  title,
-  video,
   vote_average,
   vote_count,
-}: MovieProps) => {
+}: TVShow) => {
   return (
     <div className="w-72 h-auto flex flex-col justify-between items-center rounded-md border border-secondary shadow-md hover:shadow-lg hover:shadow-secondary shadow-secondary hover:scale-105 transition-all">
-      <Link href={`/movie/${id}`}>
+      <Link href={`/series/${id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
-          alt={`Image of ${title}`}
+          alt={`Image of ${name}`}
           width={288}
           height={440}
+          priority
           className="rounded-md"
           style={{ objectFit: "cover" }}
         />
