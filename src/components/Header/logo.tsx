@@ -6,7 +6,7 @@ export const Logo = () => {
   return (
     <Link
       href="/"
-      className="flex items-center gap-1 border-b-2 border-r-2 p-1 h-fit border-secondary rounded-2xl drop-shadow-lg shadow-white"
+      className="flex items-center gap-1 border-b-2 border-r-2 p-1 h-fit border-primary rounded-2xl drop-shadow-lg shadow-white"
     >
           <RiMovie2Line className="p-0" />
       <h1>Movie Finder</h1>

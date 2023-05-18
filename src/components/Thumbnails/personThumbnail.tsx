@@ -1,7 +1,8 @@
 import { Person } from "@/types/Credits";
 import Image from "next/image";
 import Link from "next/link";
-type PersonThumbnailProps = {};
+import { TeamMember } from "../TeamMember/teamMember";
+
 export const PersonThumbnail = ({
   name,
   id,
@@ -28,12 +29,10 @@ export const PersonThumbnail = ({
             sizes="100%"
           />
         </div>
-
-        <div>
-          <p className="font-semibold">{name}</p>
-
-          <p className="italic">{character}</p>
-        </div>
+        {name  && (
+          <TeamMember name={name} role={character}  />
+        )}
+        
       </Link>
     </li>
   );

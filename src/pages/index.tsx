@@ -7,7 +7,7 @@ export default function Home({ data, requestFailed }: any) {
   }
   return (
     <Layout>
-      <div className="text-2xl subpixel-antialiased italic">
+      <div className="text-2xl ">
         <h2 className="text-3xl p-4">Welcome to MovieFinder,</h2>
         <p className="tracking-wide py-3 ">
           the ultimate website for movie lovers! Whether you are looking for the

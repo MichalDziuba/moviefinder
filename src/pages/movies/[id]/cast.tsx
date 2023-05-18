@@ -82,12 +82,6 @@ export const getServerSideProps = async (
     const movieTitle = movieData.data.title;
     const movieImage = movieData.data.poster_path;
     const movieReleaseDate=movieData.data.release_date
-    const data = {
-      title: `${movieTitle}(${movieReleaseDate})`,
-      image: movieImage,
-      
-      data: creditsData.data,
-    };
     return {
       props: {
         title: movieTitle,

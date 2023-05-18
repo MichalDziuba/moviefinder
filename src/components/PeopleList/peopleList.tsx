@@ -4,7 +4,8 @@ type PeopleListProps = {
     title: string|undefined;
     people:Person[]
 }
-export const PeopleList = ({title,people}:PeopleListProps) => {
+export const PeopleList = ({ title, people }: PeopleListProps) => {
+  console.log(people)
     return (
       <>
             <h3 className="font-bold py-2">{ title}:</h3>

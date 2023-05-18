@@ -18,7 +18,7 @@ export const MovieThumbnail = ({
   vote_count,
 }: MovieInterface) => {
   return (
-    <div className="w-72 h-auto flex flex-col justify-between items-center rounded-md border border-secondary shadow-md hover:shadow-lg hover:shadow-secondary shadow-secondary hover:scale-105 transition-all">
+    <div className="w-72 h-auto flex flex-col justify-between items-center rounded-md border border-primary shadow-md hover:shadow-lg hover:shadow-primary shadow-primary hover:scale-105 transition-all">
       <Link href={`/movies/${id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/w500/${poster_path}`}

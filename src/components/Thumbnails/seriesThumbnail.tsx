@@ -17,7 +17,7 @@ export const SeriesThumbnail = ({
   vote_count,
 }: TVShow) => {
   return (
-    <div className="w-72 h-auto flex flex-col justify-between items-center rounded-md border border-secondary shadow-md hover:shadow-lg hover:shadow-secondary shadow-secondary hover:scale-105 transition-all">
+    <div className="w-72 h-auto flex flex-col justify-between items-center rounded-md border border-primary shadow-md hover:shadow-lg hover:shadow-primary shadow-primary hover:scale-105 transition-all">
       <Link href={`/series/${id}`}>
         <Image
           src={`https://image.tmdb.org/t/p/w500/${poster_path}`}
@@ -25,7 +25,7 @@ export const SeriesThumbnail = ({
           width={288}
           height={440}
           priority
-          className="rounded-md"
+          className="rounded-md h-[430px]"
           style={{ objectFit: "cover" }}
         />
       </Link>

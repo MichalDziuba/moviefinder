@@ -9,6 +9,8 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { ActorsGallery } from "@/components/ActorsGallery/actorsGallery";
 import { formatTime, getYear } from "@/utils/helpers";
+import { TeamMember } from "@/components/TeamMember/teamMember";
+import { nanoid } from "nanoid";
 
 interface MovieProps {
   movieData: MovieData;
@@ -62,8 +64,6 @@ MovieProps) {
             backgroundRepeat: "no-repeat",
           }}
         >
-
-         
           <div className="min-h-1/3 max-h-fit gap-1 bg-primary bg-opacity-70 w-full flex flex-col justify-around pl-2">
             <Link href={movieData.homepage}>
               <h3 className=" text-2xl font-bold italic">
@@ -87,15 +87,22 @@ MovieProps) {
           </div>
         </div>
         <div className="mt-2">
-          <div className="font-base italic text-base">
+          <div className="font-base italic text-base py-4">
             <p>{movieData.overview}</p>
           </div>
-          <div>
-            <p>{director} as director</p>
+          <div className="flex items-center gap-4 py-2">
+            
+            {director && (     
+              <TeamMember name={director} role="director" />
+            )}
             {writersNames && (
               <ul>
                 {writersNames.map((el, id) => {
-                  return <li key={id}>{el} as writer</li>;
+                  return (
+                    <li key={id}>
+                      <TeamMember  key={id} name={el} role="writer" />
+                    </li>
+                  );
                 })}
               </ul>
             )}

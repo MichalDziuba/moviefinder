@@ -14,7 +14,7 @@ export const ActorsGallery = ({ actors,id }: ActorsGalleryProps) => {
   
   return (
     <div className=" flex flex-col  justify-center gap-2 overflow-hidden">
-      <h3>Cast</h3>
+      <h3 className="">Cast</h3>
 
       <ul className=" w-full flex overflow-auto gap-2 cast-gallery py-2">
         {actors.map((el) => {
